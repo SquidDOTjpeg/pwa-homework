@@ -1,3 +1,15 @@
+function serviceWorker() {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("./service-worker.js")
+      .then(() => console.log("Good"))
+      .catch((error) =>
+        console.log("Bad", error)
+      );
+  }
+}
+serviceWorker()
+
 let transactions = [];
 let myChart;
 
